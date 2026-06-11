@@ -1,0 +1,425 @@
+!
+!!!
+!!!!!!!!!!
+!
+HISTORIA DE LA FILOSOFÍA I 
+SISTEMA DE UNIVERSIDAD ABIERTA Y EDUCACIÓN A 
+DISTANCIA 
+MARCO ANTONIO LÓPEZ ESPINOZA 
+!
+!
+                     
+            
+           
+ 
+ 
+ 
+UNIVERSIDAD NACIONAL AUTÓNOMA DE MÉXICO 
+Facultad de Filosofía y Letras 
+División Sistema Universidad Abierta y Educación a Distancia 
+Licenciatura en Filosofía 
+Modalidad Universidad Abierta 
+Asignatura: H HISTORIA DE LA FILOSOFÍA:  
+PRESOCRÁTICOS, PLATÓN, ARISTÓTELES, HELENISMO 
+Profesora/ Profesor: López Espinoza Marco Antonio 
+Clave:  
+1157 
+Semestre: 
+1º 
+Créditos: 
+8 
+Área de conocimiento:  
+HISTORIA DE LA FILOSOFÍA 
+Modalidad: 
+ 
+Curso ( X) Taller ( )  
+Laboratorio ( ) Seminario ( ) 
+Tipo: Teórico (  X) Práctico ( ) 
+ 
+Teórico/Práctico (  ) 
+Carácter: 
+ 
+Obligatorio (X ) 
+Optativo ( )  
+   Horas: 3 a la semana 
+  
+!
+ÍNDICE 
+Introducción  
+Unidad I: Antecedentes y contexto Mitológico  
+!
+Unidad II: Introducción a la ﬁlosofía antigua  
+!
+!
+Unidad III: Los Presocráticos I 
+!
+Unidad IV: Los Presocráticos  II 
+!
+Unidad V: Los Presocráticos III 
+!
+!
+!
+!
+!
+!
+!
+!
+!
+!
+!
+!
+!
+INTRODUCCIÓN 
+El origen histórico de la ﬁlosofía clásica —y en general de toda la ﬁlosofía 
+occidental— normalmente se ubica en la época arcaica de la Antigua 
+Grecia, alrededor del siglo VI a. C. con el afamado Tales de Mileto. Según 
+la opinión común, Tales es el primer ﬁlósofo porque designó el principio 
+de todas las cosas a parDr de un elemento físico, el agua, un principio 
+racional y susceptible de comprobación empírica, mientras que todos los 
+personajes griegos anteriores a él expusieron ese mismo origen en 
+términos mítico- poéticos, hablando de dioses o entidades extraordinarias 
+como Zeus, Rea, Caos, Océano o el huevo cósmico. 
+Desde la perspectiva cronológica, pareciera entonces relativamente 
+sencillo iniciar un análisis sobre la ﬁlosofía griega en un punto especíﬁco, 
+en un momento más o menos nítido dónde iniciar el recuento de autores y 
+temas: la ﬁlosofía comienza en el momento que se le diferenció de la 
+mitología y sus narraciones fantásticas sobre el mundo, y fue Tales de 
+Mileto quien realizó la distinción. Sin embargo, pareciera que un enfoque 
+semejante pierde de vista el surgimiento histórico de la opinión sobre el 
+comienzo de la ﬁlosofía clásica. Efectivamente, aquella visión común 
+sobre el nacimiento de la ﬁlosofía se fundamenta considerablemente en la 
+interpretación que Aristóteles llevó a cabo para dar cuenta de la distinción 
+entre la ﬁlosofía y la mitología. 
+La primera referencia veriﬁcable de Tales como “padre” o “inventor” de la 
+ﬁlosofía aparece precisamente en la Metafísica. En 983b de la misma obra, 
+el Estagirita reﬂexiona en torno a “los primeros ﬁlósofos”, quienes 
+concibieron al arché o principio de todas las cosas de forma material: la 
+célebre “causa material” de la escuela física milesia. Aristóteles añade que 
+fue precisamente Tales “el fundador de esta (clase de) ﬁlosofía”, 
+reﬁriéndose a que éste aﬁrmó que el principio material era el agua; 
+distinguiéndolo así de lo que el propio Aristóteles denomina “teólogos”, 
+quienes, entre otras cosas, daban cuenta de la realidad no a través de 
+causas, sino de imágenes mitológicas. Que se sepa, ningún autor antes del 
+Estagirita desarrolló algo parecido sobre las ideas de Tales. 
+Por mucho tiempo la historia sobre el ﬁlosofar antiguo asumió 
+completamente la construcción aristotélica como válida, sin reparar —al 
+menos no con decisión— que la cronología y los análisis subsecuentes se 
+fundamentaban únicamente en esta opinión, opinión al menos tres siglos 
+posterior a Tales. Visto así, para cualquier interesado en la ﬁlosofía griega 
+resulta natural interrogarse hasta qué punto podemos adherirnos 
+plenamente a la palabra de Aristóteles, pues si no poseemos otras 
+referencias de fuentes anteriores que apoyen esa opinión, ¿podemos 
+sostener todo un discurso sobre el origen de la ﬁlosofía en esa única 
+interpretación?, ¿aceptarlo no sería caer en un dogmatismo sin matices? Es 
+importante aclarar que lo anterior no implica juzgar la interpretación 
+aristotélica como invalida sin más, ni tampoco realizar una apología de las 
+herramientas analíticas aristotélicas en función de su propia comprensión. 
+El problema es que buena parte de la tradición ﬁlosóﬁca y ﬁlológica 
+asumió esa postura como la única vía posible para dar cuenta del 
+comienzo del ﬁlosofar. 
+De entrada, lo que implica el problema anterior es un cuestionamiento más 
+profundo acerca del comienzo de la ﬁlosofía griega. Es decir, si la opinión 
+común, sustentada en la argumentación aristotélica, resulta dubitable —
+por su lejanía con respecto a la época de Tales y por no encontrar otra 
+fuente cercana con la cual contrastar la opinión— entonces bajo qué 
+criterios hemos de ubicar el recuento de autores y temas ﬁlosóﬁcos. Este 
+curso parte del mismo cuestionamiento. 
+Por ello, las siguientes temáticas pretenden consolidar las bases para 
+realizar críticas y reﬂexiones sobre los inicios de la ﬁlosofía y su 
+consolidación en la época clásica, que puedan presentarse en cursos 
+posteriores o en las discusiones en el área de ﬁlosofía antigua e historia de 
+la ﬁlosofía. 
+Se busca que el alumno trabaje los textos con tres tareas especíﬁcas: 1. 
+encontrar los vínculos y diferencias entre la tradición mitológica griega y 
+el pensamiento ﬁlosóﬁco antiguo; 2. conocer y reﬂexionar sobre el 
+pensamiento de algunos exponentes representativos del período arcaico; 3. 
+identiﬁcar las tradiciones que sustentan y anteceden al pensamiento de la 
+época clásica. Debido a que únicamente existen fragmentos de los escritos 
+presocráticos, es decir, de los autores ﬁlosóﬁcos anteriores a Sócrates, su 
+revisión y examen se fundamentará tanto en las fuentes originales como 
+en la interpretación de diversos y reconocidos analistas contemporáneos. 
+Objetivos generales del curso 
+Los temas propuestos han sido divididos a parDr de seis ideas principales. 
+Cada una de ellas engloba diversos autores que contribuyen al 
+esclarecimiento de las problemáticas 
+sugeridas en los objetivos. Los materiales principales y la bibliografía de 
+apoyo correspondientes a cada unidad se encuentran en la “Carpeta de 
+lecturas Hist. Fil. I” en la Plataforma “Classroom”. 
+!
+!
+!
+!
+!
+!
+!
+!
+!
+!
+!
+!
+!
+!
+!
+!
+!
+!
+!
+!
+!
+Unidad I: Contexto y antecedentes mitológicos 
+El primer tema servirá como introducción general al curso, y al mismo 
+Tiempo como reﬂexión acerca de los supuestos histórico-míticos desde los 
+cuales se inicia el pensamiento ﬁlosóﬁco. La pregunta por los orígenes de 
+la ﬁlosofía se relaciona directamente con el contexto cultural de la 
+civilización griega antigua. En ese contexto, prevalece la comprensión 
+mítica, la creencia en múltiples dioses que gobiernan a la naturaleza, 
+incluido el hombre. Los primeros ﬁlósofos griegos desarrollarán sus ideas 
+en función de su entorno, de ahí la importancia de entenderlo. Ello 
+permitirá observar con mayor nitidez sus innovaciones y dependencias 
+culturales. De particular importancia resulta atender que la mitología 
+griega está íntimamente relacionada con el culto, con las 
+identiﬁcar y desarrollar las capacidades teóricas y formales que 
+caracterizan al discurso ﬁlosóﬁco antiguo. 
+ 
+identiﬁcar de modo general las diferentes sapiencias que comprenden al 
+identiﬁcar y reﬂexionar sobre el bagaje mitológico en la ﬁlosofía griega. 
+Pensamiento antiguo: reconocer las concepciones ﬁlosóﬁcas y religiosas 
+que anteceden a las doctrinas de Platón y Aristóteles. Festividades 
+realizadas en honor a sus divinidades. Los cultos abren un espacio y 
+tiempo distintos de la cotidianidad, en donde la comunidad griega se 
+interrelaciona a varios niveles. 
+A) Material 
+-Kerényi, Karl. La Religión An2gua. Herder, 1999. “Qué es la mitología” 
+y “La esencia de la ﬁesta”, pp. 13-26;37-52. 
+-Vernant, Jean. Mito y religión en la Grecia an2gua. Barcelona, Ariel, 
+2001. Ubicado en: hkps://www.scribd.com/doc/237174574/Vernant-Mito-
+y-Religion-en-La- Grecia-AnDgua. En la Carpeta de lecturas está la 
+versión francesa. 
+B) Bibliografía de apoyo 
+-Grimal, P. Diccionario de Mitología Griega y Romana. Barcelona, 
+Paidos, 1981. -Colli, Giorgio. La sabiduría griega I. Valladolid, Troka, 
+1995, pp. 30-34; 98-112. 
+ 
+C) Objetivos 
+Identiﬁcar las características generales del aspecto mitológico de la 
+religión griega. Descripción 
+Las actividades deberán presentarse en un texto escrito con una extensión 
+máxima de 350 palabras por cada una. Cada actividad puede incluir uno o 
+más puntos de los señalados anteriormente. En este caso, la actividad 
+abarca los tres puntos señalados arriba. También podrán incluirse 
+referencias del material Mito y religión en la Grecia antigua de J. P. 
+Vernant, y del apartado “Misterios de Eleusis” del texto de G. Colli. 
+D) Criterios de Evaluación 
+Pertinencia de contenido 
+Extensión 
+!
+!
+!
+!
+!
+!
+!
+!
+!
+!
+!
+!
+!
+!
+!
+!
+Unidad II: Introducción a la ﬁlosofía anIgua 
+Una vez señaladas las condiciones mitológicas imperantes en la cultura 
+griega, el segundo tema propiciará que el alumno logre una comprensión 
+más nítida del inicio de la ﬁlosofía, y coadyuvará a contextualizar 
+históricamente las teorías de los primeros sabios griegos: los presocráticos 
+pensaron desde y para su época especíﬁca. 
+Lo anterior no quiere decir que las teorías presocráticas o las socrático- 
+platónicas se limiten exclusivamente a su época, sin ninguna aportación a 
+los problemas contemporáneos; por el contrario, un entendimiento más 
+claro de la tradición y dimensión temporal de sus ideas permite reﬂexionar 
+hondamente sobre el sentido mismo del quehacer ﬁlosóﬁco en general —
+no sólo del antiguo. Por ello, a través de las lecturas se analizarán los 
+siguientes aspectos: a) la revisión crítica de la interpretación aristotélica 
+sobre los presocráDcos; b) la distinción entre dos presupuestos 
+metodológicos de origen griego: el cientíﬁco y el ﬁlosóﬁco; y c) la 
+condición histórica que acompaña a todo pensamiento antiguo. Los tres 
+aspectos conﬁguran lo que podemos denominar un horizonte metodológico 
+que nos permita comprender a los ﬁlósofos griegos en su diferencia con 
+respecto a nuestras propias formas de pensar. 
+A) Material 
+-Gadamer, Hans. El inicio de la ﬁlosofía occidental. Paidos, 1999. “El 
+planteamiento doxográﬁco de Aristóteles”, pp. 85-97. 
+-Cornford, F.M. Principium sapientiae. Visor. Madrid, 1988. “Empirismo 
+versus inspiración” y “La teoría empírica del conocimiento”, pp. 17-26; 
+48-63. 
+B) Bibliografía de apoyo 
+-Cherniss, H. La crí2ca aristotélica a la ﬁlosofía presocrática. México, 
+UNAM, 1981. 
+!
+C) Objetivos 
+Identiﬁcar los tres aspectos presentados en el tema y su interrelación con el 
+horizonte metodológico. 
+Las Actividades deberán presentarse en un documento escrito con una 
+extensión máxima de 300 palabras por cada actividad. En este caso, 
+incluye los tres puntos señalados anteriormente. También pueden incluirse 
+referencias al texto de Harold Cherniss. 
+Criterios de Evaluación. El trabajo se evaluará bajo los siguientes 
+criterios:  
+Pertinencia de contenido 
+Extensión 
+!
+!
+!
+!
+Unidad III: Los presocráticos I 
+Ya establecido el horizonte metodológico, es momento de llevar a cabo el 
+acercamiento a los pensadores más representativos del período inicial de la 
+ﬁlosofía presocrática; Tales, Anaxímenes y Anaximandro de Mileto, 
+Jenófanes de Colofón, Heráclito de Éfeso y Parménides de Eléa, 
+resaltando su peculiaridad e interconexión histórica. En términos de la 
+interpretación aristotélica, los primeros cinco —de Tales a Heráclito— 
+son considerados los “físicos” o “ﬁsiólogos” pues reﬂexionará sobre el 
+principio material que constituye a toda la realidad, mientras que 
+Parménides —y de algún modo Jenófanes— señalan un principio distinto, 
+independiente de la materia: la forma. 
+En consonancia con el tema anterior, el propósito de este tercer tema será 
+analizar los fragmentos de dichos autores con independencia del esquema 
+aristotélico, ubicándolos a parDr de su propio contexto histórico, el siglo 
+VI a. C., y también como herederos de la tradición griega que se remonta 
+a lo estudiado en el primer tema. 
+!
+!
+!
+A) Materiales 
+-Eggers, C. et al. Los ﬁlósofos presocráticos I. Gredos, Madrid, 2000, pp. 
+55-143; 265-483. 7 
+!
+B) BibliograUa de apoyo 
+-Bernabé, A. De Tales a Demócrito. Madrid, Alianza, 2000. -Gadamer, 
+Hans. El inicio de la sabiduría. Paidos, 1999. “Sobre la transmisión de 
+Heráclito” 
+“Estudios Heraclíteos” Páginas: 17-83. 
+-Gadamer, Hans. El inicio de la ﬁlosofía occidental. Paidos, 1999. 
+“Parménides y las opiniones de los mortales” y “Parménides y el ser”, pp. 
+113-148. 
+-Guthrie, W.K.C. Historia de la ﬁlosofía Griega I y II. Gredos, Madrid, 
+1993. 
+C) Objetivos 
+Identiﬁcar las características especiﬁcas de las doctrinas de los primeros 
+ﬁlósofos griegos a través de sus fragmentos y testimonios. 
+Descripción 
+Las Actividades deberán presentarse en un documento escrito con una 
+extensión máxima de 200 palabras por cada actividad. Cada actividad 
+puede incluir uno o más puntos de los señalados anteriormente. Se sugiere 
+también se incluyan aspectos señalados en los textos de Gadamer, Bernabé 
+o Guthire. 
+D) Criterios de Evaluación 
+!
+Pertinencia de contenido 
+Extensión 
+!
+!
+Unidad IV: Los PresocráIcos II 
+El cuarto tema continúa con el mismo criterio para el análisis de escuelas 
+posteriores a los presocráDcos iniciales. Los autores analizados pertenecen 
+en su mayoría al siglo V a.C., comenzando por los sucesores de la llamada 
+escuela eleática: Zenón de Elea y Meliso de Samos, seguidos por otros 
+pensadores que retomarán, de alguna u otra manera, algunas 
+• 
+ideas del eleatismo: Empédocles de Agrigento, Anaxágoras de Clazomene, 
+Diógenes de Apolonia, Leucipo de Mileto y Demócrito de Abdera. En sus 
+fragmentos ya se observan varias diferencias con respecto a los primeros 
+presocráDcos, en parDcular en el modo de expresarse. EfecDvamente, 
+Zenón, Anaxágoras, Diógenes, Leucipo y Demócrito —éstos dos úlDmos 
+también llamados atomistas— uDlizan argumentos, razonamientos 
+lógicamente más arDculados que sus predecesores y cada vez más 
+alejados de la visión mitológica del mundo. Caso aparte es el de 
+Empédocles quien combina en su personalidad enigmáDca rasgos arcaicos 
+con las visión propia de sus contemporáneos del siglo V. 
+A) Materiales 
+- Eggers, Conrado et al. Los ﬁlósofos presocrá2cos II y III. Gredos, 
+Madrid, 2008. Páginas: Del tomo II, 17-402; del tomo III, 17-76; 141-421. 
+B) Bibliografía de apoyo 
+-Bernabé, A. De Tales a Demócrito. Madrid, Alianza, 2000. 
+-Bernabé, A. De Tales a Demócrito. Madrid, Alianza, 2000. “El 
+Empédocles de Estrasburgo” pp. 327-340. 
+-Colli, Giorgio. Zenón de Elea. México, Sexto Piso, 2006, pp. 134-157 
+-Guthrie, W.K.C. Historia de la ﬁlosofía Griega II. Gredos, Madrid, 1993. 
+!
+ 
+C) Objetivos 
+Identiﬁcar las características especíﬁcas de las doctrinas de los primeros 
+ﬁlósofos griegos a través de sus fragmentos y testimonios.  
+ • 
+Descripción  
+      
+Las AcDvidades deberán presentarse en un documento escrito con 
+una extensión aproximada de 200 palabras por cada acDvidad. Cada 
+acDvidad puede incluir uno o más puntos de los señalados 
+anteriormente. Se sugiere se incluyan aspectos de los textos de Colli 
+y Bernabé.  
+!
+D) Criterios de Evaluación 
+Pertinencia de contenido 
+Extensión 
+!
+!
+!
+!
+!
+!
+!
+!
+!
+!
+!
+!
+!
+!
+!
+!
+ 
+Unidad V: Presocráticos III 
+El quinto tema se concentra en la trasformación histórica que marcan las 
+distintas escuelas de pensamiento consumadas en el siglo V a. C. Por un 
+lado, se consolidan movimientos culturales a gran escala, de corte 
+ﬁlosóﬁco religioso, como el Orﬁsmo y el Pitagorismo; de particular 
+interés resulta la transformación del concepto de psyché, “alma” que 
+llevan a cabo dichas corrientes. Y por otro lado, surge el movimiento 
+cultural político-pedagógico denominado la sofística, cuyos representantes 
+más inﬂuyentes son Protágoras de Abdera y Gorgias de Leontini. Ambas 
+tradiciones, soﬁstas y orﬁco-pitagóricos, conforman el suelo histórico que 
+posibilita el surgimiento del pensamiento clásico griego, pues Sócrates y 
+Platón buscarán, en el siglo V, una superación de la fuerza político-
+educativa de los soﬁstas apelando a una revaloración del conocimiento 
+teórico por y a través del cuidado del alma. 
+A) Material 
+-Bernabé, A. De Tales a Demócrito. Madrid, Alianza, 2000, pp. 69-87. 
+-Eggers, Conrado et al. Los ﬁlósofos presocráticos I y III. Gredos, Madrid, 
+2008. Páginas: Del tomo I: 147-238; del tomo III: 77-138. 
+-Guthrie, W. K. C. Orfeo y la religión griega. Madrid, Siruela, 2003. “Vida 
+y práctica de los órﬁcos”, pp. 253-278. 
+-Jaeger, Werner. Paideia: los ideales de la cultura griega. México, FCE,
+1988, pp. 281-302.  
+B) Bibliografía de apoyo 
+-Jaeger, W. La teología de los primeros ﬁlósofos. México, FCE, 1999. “El 
+origen de la doctrina de la divinidad del alma”, pp. 77-92. 
+-Bernabé, Alberto. Hieros Lógos. Madrid, Akal, 2003. 
+-Guthrie, W.K.C. Historia de la ﬁlosofía Griega III. Gredos, Madrid, 1993. 
+!
+C) Objetivos 
+Identiﬁcar las características especíﬁcas del orﬁsmo, el pitagorismo y la 
+sofística a través de sus fragmentos y visiones de conjunto. 
+Descripción 
+Las Actividades deberán presentarse en un documento escrito con una 
+extensión aproximada de 300 palabras por cada actividad. En este caso, la 
+Actividad abarca los cinco puntos señalados anteriormente. También 
+pueden incluirse referencias del material a los textos de Jager y Guthrie. 
+!
+D) Criterios de Evaluación 
+Pertinencia de contenido 
+Extensión 
+!
+!
+!

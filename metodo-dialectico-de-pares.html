@@ -1,0 +1,852 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Método dialéctico de pares · Manual de estudio</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,500;0,9..144,600;0,9..144,700;1,9..144,400;1,9..144,500&family=Newsreader:ital,opsz,wght@0,6..72,400;0,6..72,500;0,6..72,600;1,6..72,400;1,6..72,500&family=IBM+Plex+Sans:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --paper:#F2EDE3;
+    --paper-panel:#ECE5D6;
+    --paper-deep:#E4DBC8;
+    --ink:#20262E;
+    --ink-2:#474E57;
+    --ink-3:#6C727A;
+    --oxblood:#7C2B2B;
+    --oxblood-bright:#9A3636;
+    --bronze:#9A7C42;
+    --line:rgba(32,38,46,0.14);
+    --line-strong:rgba(32,38,46,0.28);
+    --dark:#1B2229;
+    --dark-2:#252E37;
+    --shadow:0 1px 0 rgba(32,38,46,0.05);
+    --display:"Fraunces",Georgia,serif;
+    --body:"Newsreader",Georgia,serif;
+    --util:"IBM Plex Sans",system-ui,sans-serif;
+    --col:42rem;
+  }
+
+  *{box-sizing:border-box;}
+  html{-webkit-text-size-adjust:100%;}
+  body{
+    margin:0;
+    background:var(--paper);
+    color:var(--ink);
+    font-family:var(--body);
+    font-size:clamp(1.05rem,0.98rem + 0.35vw,1.18rem);
+    line-height:1.62;
+    font-weight:400;
+    -webkit-font-smoothing:antialiased;
+    text-rendering:optimizeLegibility;
+  }
+  /* faint paper texture */
+  body::before{
+    content:"";
+    position:fixed;inset:0;
+    pointer-events:none;z-index:0;
+    background:
+      radial-gradient(circle at 18% 12%, rgba(154,124,66,0.05), transparent 38%),
+      radial-gradient(circle at 86% 78%, rgba(124,43,43,0.04), transparent 40%);
+  }
+
+  .wrap{position:relative;z-index:1;}
+  .col{
+    width:100%;
+    max-width:var(--col);
+    margin-inline:auto;
+    padding-inline:clamp(1.25rem,5vw,2rem);
+  }
+
+  a{color:var(--oxblood);text-decoration-thickness:1px;text-underline-offset:2px;text-decoration-color:rgba(124,43,43,0.4);}
+  a:hover{color:var(--oxblood-bright);text-decoration-color:var(--oxblood-bright);}
+
+  :focus-visible{outline:2.5px solid var(--oxblood);outline-offset:3px;border-radius:2px;}
+
+  p{margin:0 0 1.05rem;}
+  strong{font-weight:600;color:var(--ink);}
+  em{font-style:italic;}
+
+  /* ---------- MASTHEAD ---------- */
+  .masthead{
+    border-bottom:1px solid var(--line-strong);
+    padding-block:clamp(3rem,9vw,6rem) clamp(2.2rem,6vw,3.5rem);
+  }
+  .eyebrow{
+    font-family:var(--util);
+    font-size:0.72rem;
+    font-weight:600;
+    letter-spacing:0.22em;
+    text-transform:uppercase;
+    color:var(--oxblood);
+    margin:0 0 1.4rem;
+  }
+  .eyebrow .dot{color:var(--bronze);margin-inline:0.55em;}
+  .masthead h1{
+    font-family:var(--display);
+    font-weight:600;
+    font-size:clamp(2.7rem,3.2rem + 4.5vw,5.4rem);
+    line-height:0.98;
+    letter-spacing:-0.015em;
+    margin:0 0 1.1rem;
+    font-optical-sizing:auto;
+  }
+  .masthead h1 em{
+    font-style:italic;
+    font-weight:500;
+    color:var(--oxblood);
+  }
+  .lede{
+    font-size:clamp(1.2rem,1.05rem + 0.7vw,1.5rem);
+    line-height:1.45;
+    color:var(--ink-2);
+    max-width:34rem;
+    font-weight:400;
+  }
+  .lede strong{color:var(--ink);font-weight:500;}
+
+  .masthead-meta{
+    display:flex;flex-wrap:wrap;gap:0.5rem 1.4rem;
+    margin-top:2.2rem;
+    font-family:var(--util);
+    font-size:0.78rem;letter-spacing:0.04em;
+    color:var(--ink-3);
+  }
+  .masthead-meta span{display:inline-flex;align-items:center;gap:0.5em;}
+  .masthead-meta b{color:var(--ink-2);font-weight:600;}
+
+  @media (prefers-reduced-motion: no-preference){
+    .reveal{opacity:0;transform:translateY(14px);animation:rise 0.9s cubic-bezier(.2,.7,.2,1) forwards;}
+    .reveal.d1{animation-delay:.08s;}
+    .reveal.d2{animation-delay:.18s;}
+    .reveal.d3{animation-delay:.30s;}
+    @keyframes rise{to{opacity:1;transform:none;}}
+  }
+
+  /* ---------- INDEX ---------- */
+  .index{
+    padding-block:clamp(2rem,5vw,3rem);
+    border-bottom:1px solid var(--line);
+  }
+  .index h2{
+    font-family:var(--util);
+    font-size:0.72rem;font-weight:600;letter-spacing:0.2em;text-transform:uppercase;
+    color:var(--ink-3);margin:0 0 1.3rem;
+  }
+  .index ol{
+    list-style:none;margin:0;padding:0;
+    display:grid;grid-template-columns:1fr;gap:0.1rem;
+    counter-reset:idx;
+  }
+  @media(min-width:540px){.index ol{grid-template-columns:1fr 1fr;column-gap:2.2rem;}}
+  .index li{counter-increment:idx;}
+  .index a{
+    display:flex;align-items:baseline;gap:0.85rem;
+    padding:0.62rem 0;
+    border-bottom:1px solid var(--line);
+    text-decoration:none;color:var(--ink);
+    font-family:var(--body);
+    transition:color .15s, padding-left .15s;
+  }
+  .index a:hover{color:var(--oxblood);padding-left:0.3rem;}
+  .index a::before{
+    content:counter(idx,upper-roman);
+    font-family:var(--util);font-size:0.72rem;font-weight:600;
+    color:var(--bronze);min-width:2.1em;letter-spacing:0.03em;
+    flex-shrink:0;
+  }
+
+  /* ---------- SECTIONS ---------- */
+  section[id]{scroll-margin-top:1.5rem;}
+  .section{padding-block:clamp(2.8rem,7vw,4.6rem);border-bottom:1px solid var(--line);}
+  .sec-head{margin-bottom:2rem;}
+  .sec-num{
+    font-family:var(--util);font-size:0.72rem;font-weight:600;letter-spacing:0.2em;
+    text-transform:uppercase;color:var(--oxblood);display:block;margin-bottom:0.7rem;
+  }
+  .sec-num .roman{color:var(--bronze);margin-right:0.7em;}
+  h2.sec-title{
+    font-family:var(--display);font-weight:600;
+    font-size:clamp(1.85rem,1.5rem + 1.8vw,2.9rem);
+    line-height:1.04;letter-spacing:-0.01em;margin:0;
+    font-optical-sizing:auto;
+  }
+  .sec-sub{
+    margin-top:0.9rem;color:var(--ink-2);
+    font-size:1.05rem;font-style:italic;max-width:36rem;
+  }
+  h3{
+    font-family:var(--display);font-weight:600;
+    font-size:clamp(1.25rem,1.1rem + 0.6vw,1.55rem);
+    line-height:1.15;letter-spacing:-0.005em;
+    margin:2.4rem 0 0.8rem;
+  }
+  h3:first-of-type{margin-top:0;}
+  h4{
+    font-family:var(--util);font-weight:600;font-size:0.95rem;
+    letter-spacing:0.01em;color:var(--ink);margin:1.6rem 0 0.4rem;
+  }
+
+  /* ---------- PRINCIPLE CARDS ---------- */
+  .principles{display:grid;gap:1px;background:var(--line);border:1px solid var(--line);border-radius:6px;overflow:hidden;}
+  @media(min-width:600px){.principles{grid-template-columns:1fr 1fr;}}
+  .pr{
+    background:var(--paper-panel);
+    padding:1.5rem 1.5rem 1.6rem;
+    display:flex;flex-direction:column;gap:0.55rem;
+  }
+  .pr .n{
+    font-family:var(--display);font-weight:600;font-size:1.6rem;
+    color:var(--bronze);line-height:1;
+    font-feature-settings:"lnum";
+  }
+  .pr h3{font-size:1.18rem;margin:0;}
+  .pr p{margin:0;font-size:0.98rem;color:var(--ink-2);line-height:1.5;}
+  .pr .esencia{
+    margin-top:auto;padding-top:0.85rem;
+    border-top:1px dashed var(--line-strong);
+    font-style:italic;color:var(--oxblood);font-size:1.02rem;line-height:1.4;
+  }
+
+  /* ---------- PHASES ---------- */
+  .phases{display:flex;flex-direction:column;gap:0;margin-top:0.5rem;}
+  .phase{
+    display:grid;grid-template-columns:auto 1fr;gap:1.2rem;
+    padding:1.4rem 0;border-top:1px solid var(--line);position:relative;
+  }
+  .phase:last-child{border-bottom:1px solid var(--line);}
+  .phase .ph-n{
+    font-family:var(--display);font-weight:600;
+    font-size:clamp(1.8rem,1.5rem + 1vw,2.5rem);
+    color:var(--oxblood);line-height:0.9;min-width:1.6em;
+    font-feature-settings:"lnum";
+  }
+  .phase .ph-body h3{margin:0 0 0.35rem;font-size:1.2rem;}
+  .phase .ph-what{margin:0 0 0.7rem;color:var(--ink-2);font-size:1rem;line-height:1.5;}
+  .phase .ph-prod{
+    font-family:var(--util);font-size:0.84rem;line-height:1.45;
+    color:var(--ink);background:var(--paper-deep);
+    border-left:3px solid var(--bronze);
+    padding:0.55rem 0.8rem;border-radius:0 4px 4px 0;
+  }
+  .phase .ph-prod b{color:var(--oxblood);font-weight:600;letter-spacing:0.04em;text-transform:uppercase;font-size:0.74rem;}
+
+  /* variant block */
+  .variants{
+    margin-top:1.8rem;background:var(--paper-panel);
+    border:1px solid var(--line);border-radius:6px;padding:1.4rem 1.5rem;
+  }
+  .variants h4{margin-top:0;color:var(--oxblood);}
+  .variants ul{margin:0.5rem 0 0;padding:0;list-style:none;display:grid;gap:0.7rem;}
+  .variants li{padding-left:1.1rem;position:relative;font-size:0.98rem;color:var(--ink-2);line-height:1.5;}
+  .variants li::before{content:"";position:absolute;left:0;top:0.65em;width:0.5rem;height:1px;background:var(--bronze);}
+  .variants li b{color:var(--ink);}
+
+  /* ---------- RULES GRID ---------- */
+  .rules{display:grid;gap:1px;background:var(--line);border:1px solid var(--line);border-radius:6px;overflow:hidden;counter-reset:r;}
+  @media(min-width:620px){.rules{grid-template-columns:1fr 1fr;}}
+  .rule{background:var(--paper-panel);padding:1.15rem 1.3rem;counter-increment:r;}
+  .rule .rname{
+    display:flex;align-items:baseline;gap:0.6rem;margin-bottom:0.3rem;
+    font-family:var(--display);font-weight:600;font-size:1.08rem;color:var(--ink);
+  }
+  .rule .rname::before{
+    content:counter(r,decimal-leading-zero);
+    font-family:var(--util);font-size:0.74rem;font-weight:600;color:var(--bronze);
+    flex-shrink:0;letter-spacing:0.05em;
+  }
+  .rule p{margin:0;font-size:0.93rem;color:var(--ink-2);line-height:1.48;}
+
+  /* ---------- DIMENSIONS (the new heart) ---------- */
+  .dim-intro{
+    font-size:1.12rem;color:var(--ink-2);font-style:italic;
+    border-left:3px solid var(--oxblood);padding-left:1.1rem;margin-bottom:2.4rem;
+  }
+  .dim{margin-bottom:2.8rem;}
+  .dim:last-child{margin-bottom:0;}
+  .dim-tag{
+    font-family:var(--util);font-size:0.72rem;font-weight:600;letter-spacing:0.16em;
+    text-transform:uppercase;color:var(--oxblood);
+    display:flex;align-items:center;gap:0.7rem;margin-bottom:0.5rem;
+  }
+  .dim-tag .k{
+    font-family:var(--display);font-size:1rem;color:var(--bronze);
+    border:1px solid var(--bronze);border-radius:50%;
+    width:1.7em;height:1.7em;display:inline-flex;align-items:center;justify-content:center;
+    flex-shrink:0;
+  }
+  .dim h3{margin-top:0;}
+  .dim ul{margin:0.6rem 0 0;padding:0;list-style:none;display:grid;gap:0.85rem;}
+  .dim li{padding-left:1.25rem;position:relative;color:var(--ink-2);line-height:1.55;}
+  .dim li::before{content:"";position:absolute;left:0;top:0.6em;width:0.55rem;height:0.55rem;border:1.5px solid var(--oxblood);border-radius:50%;}
+  .dim li b{color:var(--ink);font-weight:600;}
+
+  /* ---------- CALLOUT (marginalia / warning) ---------- */
+  .callout{
+    background:var(--paper-deep);
+    border:1px solid var(--line-strong);
+    border-left:4px solid var(--oxblood);
+    border-radius:0 6px 6px 0;
+    padding:1.2rem 1.4rem;margin:1.6rem 0;
+  }
+  .callout .clabel{
+    font-family:var(--util);font-size:0.7rem;font-weight:600;letter-spacing:0.16em;
+    text-transform:uppercase;color:var(--oxblood);margin-bottom:0.45rem;display:block;
+  }
+  .callout p{margin:0;font-size:0.99rem;line-height:1.55;color:var(--ink);}
+  .callout p + p{margin-top:0.7rem;}
+  .callout em{color:var(--oxblood);font-style:italic;}
+
+  /* ---------- PULL QUOTE ---------- */
+  .pull{
+    font-family:var(--display);font-weight:500;font-style:italic;
+    font-size:clamp(1.4rem,1.1rem + 1.4vw,2rem);
+    line-height:1.25;letter-spacing:-0.01em;color:var(--ink);
+    text-align:center;margin:0;padding:0 0.5rem;
+  }
+  .pull .by{display:block;font-family:var(--util);font-style:normal;font-weight:600;
+    font-size:0.74rem;letter-spacing:0.16em;text-transform:uppercase;color:var(--oxblood);margin-top:1.1rem;}
+
+  /* ---------- GLOSSARY ---------- */
+  .glossary{display:grid;gap:0;}
+  .gl{
+    display:grid;grid-template-columns:1fr;gap:0.15rem;
+    padding:0.95rem 0;border-top:1px solid var(--line);
+  }
+  @media(min-width:640px){.gl{grid-template-columns:13rem 1fr;gap:1.4rem;align-items:baseline;}}
+  .gl:last-child{border-bottom:1px solid var(--line);}
+  .gl dt{font-family:var(--display);font-weight:600;font-size:1.05rem;color:var(--oxblood);}
+  .gl dd{margin:0;color:var(--ink-2);font-size:0.97rem;line-height:1.5;}
+
+  /* ---------- ULTRALEARNING TABLE ---------- */
+  .ul-map{display:grid;gap:1px;background:var(--line);border:1px solid var(--line);border-radius:6px;overflow:hidden;}
+  @media(min-width:560px){.ul-map{grid-template-columns:auto 1fr;}}
+  .ul-map .term{background:var(--paper-deep);padding:0.85rem 1.1rem;font-family:var(--util);font-weight:600;font-size:0.9rem;color:var(--oxblood);letter-spacing:0.02em;}
+  .ul-map .gloss{background:var(--paper-panel);padding:0.85rem 1.1rem;font-size:0.96rem;color:var(--ink-2);line-height:1.45;}
+
+  /* ---------- SYNTHESIS CARD (dark, the single flourish) ---------- */
+  .synth{
+    background:var(--dark);color:var(--paper);
+    border-radius:10px;margin:clamp(2.5rem,6vw,4rem) 0 0;
+    padding:clamp(2rem,5vw,3.4rem);
+    position:relative;overflow:hidden;
+  }
+  .synth::after{
+    content:"";position:absolute;top:-30%;right:-10%;width:60%;height:160%;
+    background:radial-gradient(circle, rgba(154,124,66,0.16), transparent 65%);pointer-events:none;
+  }
+  .synth .s-eyebrow{
+    font-family:var(--util);font-size:0.72rem;font-weight:600;letter-spacing:0.2em;
+    text-transform:uppercase;color:var(--bronze);margin:0 0 0.9rem;position:relative;
+  }
+  .synth h2{
+    font-family:var(--display);font-weight:600;font-size:clamp(1.7rem,1.4rem + 1.6vw,2.6rem);
+    line-height:1.05;margin:0 0 1.6rem;color:var(--paper);position:relative;letter-spacing:-0.01em;
+  }
+  .synth h2 em{font-style:italic;color:#D9A24E;font-weight:500;}
+  .synth .s-block{position:relative;margin-bottom:1.7rem;}
+  .synth .s-block:last-child{margin-bottom:0;}
+  .synth .s-k{
+    font-family:var(--util);font-size:0.7rem;font-weight:600;letter-spacing:0.14em;
+    text-transform:uppercase;color:#C9A56B;margin-bottom:0.5rem;
+  }
+  .synth .s-line{font-family:var(--body);font-size:1.08rem;line-height:1.5;color:rgba(242,237,227,0.92);}
+  .synth .s-line strong{color:#fff;font-weight:600;}
+  .synth .chips{display:flex;flex-wrap:wrap;gap:0.5rem;}
+  .synth .chip{
+    font-family:var(--util);font-size:0.82rem;font-weight:500;
+    background:rgba(242,237,227,0.08);border:1px solid rgba(242,237,227,0.16);
+    color:rgba(242,237,227,0.95);padding:0.34rem 0.75rem;border-radius:100px;
+  }
+  .synth .chip b{color:#D9A24E;font-weight:600;}
+  .synth .s-divider{height:1px;background:rgba(242,237,227,0.14);margin:1.7rem 0;position:relative;}
+  .synth .s-final{
+    font-family:var(--display);font-style:italic;font-weight:500;
+    font-size:clamp(1.15rem,1rem + 0.7vw,1.45rem);line-height:1.3;
+    color:#fff;position:relative;
+  }
+
+  /* ---------- HOW TO USE ---------- */
+  .howto{
+    background:var(--paper-panel);border:1px solid var(--line);border-radius:6px;
+    padding:1.4rem 1.5rem;margin-top:1.6rem;
+  }
+  .howto h4{margin-top:0;color:var(--oxblood);}
+  .howto p{margin:0;font-size:0.97rem;color:var(--ink-2);line-height:1.55;}
+
+  /* ---------- FOOTER ---------- */
+  .colophon{
+    padding-block:clamp(2.5rem,6vw,4rem);text-align:center;
+  }
+  .colophon p{font-family:var(--util);font-size:0.8rem;color:var(--ink-3);letter-spacing:0.03em;margin:0;}
+  .colophon .mark{color:var(--bronze);font-family:var(--display);font-size:1.3rem;font-style:italic;display:block;margin-bottom:0.8rem;}
+
+  /* ---------- PRINT ---------- */
+  @media print{
+    body{background:#fff;font-size:10.5pt;}
+    body::before{display:none;}
+    .index{break-after:page;}
+    .section{break-inside:avoid-page;border-bottom:1px solid #ccc;}
+    .phase,.pr,.rule,.dim,.callout{break-inside:avoid;}
+    .synth{background:#fff;color:#000;border:1.5px solid #000;}
+    .synth h2,.synth .s-final,.synth .s-line strong{color:#000;}
+    .synth h2 em,.synth .chip b{color:var(--oxblood);}
+    .synth .s-line,.synth .chip{color:#222;}
+    .synth .chip{border:1px solid #999;background:#f3f3f3;}
+    a{color:#000;text-decoration:none;}
+  }
+</style>
+</head>
+<body>
+<div class="wrap">
+
+  <!-- ============ MASTHEAD ============ -->
+  <header class="masthead">
+    <div class="col">
+      <p class="eyebrow reveal">Manual de estudio <span class="dot">◆</span> Filosofía <span class="dot">◆</span> Edición de pares</p>
+      <h1 class="reveal d1">Método dialéctico<br>de <em>pares</em></h1>
+      <p class="lede reveal d2">Aprender filosofía no como espectadores cultos, sino como practicantes del pensamiento. <strong>Cada uno domina una mitad y la enseña; ambos verifican lo aprendido por el debate y la escritura.</strong></p>
+      <div class="masthead-meta reveal d3">
+        <span><b>Para</b> dos personas con compromiso firme</span>
+        <span><b>Núcleo</b> enseñanza recíproca rigurosa</span>
+        <span><b>Horizonte</b> años, no meses</span>
+      </div>
+    </div>
+  </header>
+
+  <!-- ============ INDEX ============ -->
+  <nav class="index" aria-label="Índice del manual">
+    <div class="col">
+      <h2>Índice</h2>
+      <ol>
+        <li><a href="#proposito">Naturaleza y propósito</a></li>
+        <li><a href="#principios">Los seis principios rectores</a></li>
+        <li><a href="#division">La división del trabajo</a></li>
+        <li><a href="#fases">El protocolo de inmersión · 7 fases</a></li>
+        <li><a href="#reglas">Las reglas de calidad</a></li>
+        <li><a href="#dimensiones">Dimensiones cualitativas</a></li>
+        <li><a href="#microtareas">El banco de microtareas</a></li>
+        <li><a href="#evaluacion">La evaluación mensual</a></li>
+        <li><a href="#ultralearning">Correspondencia con el <i>ultralearning</i></a></li>
+        <li><a href="#glosario">Glosario del método</a></li>
+        <li><a href="#sintesis">Síntesis en una página</a></li>
+      </ol>
+    </div>
+  </nav>
+
+  <!-- ============ I. PROPÓSITO ============ -->
+  <section id="proposito" class="section">
+    <div class="col">
+      <div class="sec-head">
+        <span class="sec-num"><span class="roman">I</span>Naturaleza y propósito</span>
+        <h2 class="sec-title">Qué es este método y para quién</h2>
+      </div>
+      <p>Este método está diseñado para dos personas con compromiso firme y disponibilidad real, que quieren adentrarse en la filosofía como practicantes serios: argumentar con precisión, leer con profundidad, objetar con caridad, conceder con honestidad y producir pensamiento propio sostenido en lectura rigurosa. Su propósito no es cubrir un programa, sino <strong>formar la capacidad de pensar filosóficamente</strong>.</p>
+      <p>Combina tres tradiciones: la dialéctica clásica como pedagogía —la enseñanza recíproca de la Academia y el Liceo—, los principios del <em>ultralearning</em>, y los protocolos de lectura cercana propios de la filosofía profesional. Su unidad básica es el <strong>par estudiantil</strong>: dos personas que se dividen el trabajo, se enseñan, se objetan con rigor y producen juntas una comprensión que ninguna alcanzaría sola.</p>
+      <div class="howto">
+        <h4>Cómo usar este manual</h4>
+        <p>Léanlo entero una vez entre los dos. Después funciona como referencia: revísenlo el primer día de cada tema (las siete fases), una vez al mes (las reglas de calidad y las dimensiones) y cuando algo se sienta a la deriva (las advertencias). La arquitectura de tiempo —días, sesiones y ritmo semanal— vive en una hoja aparte; este manual se ocupa de lo sustantivo: la forma del estudio, los materiales, la mentalidad y la enseñanza mutua.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ II. PRINCIPIOS ============ -->
+  <section id="principios" class="section">
+    <div class="col">
+      <div class="sec-head">
+        <span class="sec-num"><span class="roman">II</span>El cimiento</span>
+        <h2 class="sec-title">Los seis principios rectores</h2>
+        <p class="sec-sub">Cuando el método falla, casi siempre es porque uno de estos seis se relajó. Cada uno cabe en una frase.</p>
+      </div>
+      <div class="principles">
+        <div class="pr">
+          <span class="n">1</span>
+          <h3>Principio de Feynman</h3>
+          <p>Se estudia para enseñar, no para resumir. Enseñar es la prueba más severa de comprensión.</p>
+          <p class="esencia">Si no puedes enseñarlo y defenderlo, todavía no lo entiendes.</p>
+        </div>
+        <div class="pr">
+          <span class="n">2</span>
+          <h3>Principio de caridad</h3>
+          <p>Ante lo que el otro enseña o lo que un autor argumenta, primero se reconstruye en su versión más fuerte.</p>
+          <p class="esencia">Reconstruye al otro en su mejor versión; solo entonces objeta.</p>
+        </div>
+        <div class="pr">
+          <span class="n">3</span>
+          <h3>Simetría compensada</h3>
+          <p>La carga cognitiva se equilibra a lo largo del ciclo, con ajustes y compensaciones, no sesión por sesión.</p>
+          <p class="esencia">La carga se equilibra en el ciclo, no en cada día.</p>
+        </div>
+        <div class="pr">
+          <span class="n">4</span>
+          <h3>Producción escrita</h3>
+          <p>Cada fase deja un artefacto escrito. La escritura es donde se prueba la comprensión, no la memoria.</p>
+          <p class="esencia">Lo que no se escribe no se entendió: se creyó entender.</p>
+        </div>
+        <div class="pr">
+          <span class="n">5</span>
+          <h3>Retorno al texto</h3>
+          <p>Las disputas terminológicas o interpretativas se zanjan volviendo a la página, no apelando a recuerdos.</p>
+          <p class="esencia">Las disputas se resuelven en el texto, no en el recuerdo.</p>
+        </div>
+        <div class="pr">
+          <span class="n">6</span>
+          <h3>Sostenibilidad</h3>
+          <p>El mejor método no es el más ambicioso, sino el que se sigue haciendo a largo plazo. Constancia sobre intensidad.</p>
+          <p class="esencia">Gana el método que sigues haciendo en el mes catorce.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ III. DIVISIÓN ============ -->
+  <section id="division" class="section">
+    <div class="col">
+      <div class="sec-head">
+        <span class="sec-num"><span class="roman">III</span>El reparto</span>
+        <h2 class="sec-title">La división del trabajo entre los dos</h2>
+      </div>
+      <p>La división no es por dificultad, sino por <strong>complementariedad</strong>: las dos partes deben ser de peso comparable y deben dialogar entre sí. No son temas independientes, sino dos caras del mismo problema —deducción e inducción, no “Aristóteles para uno y Kant para el otro”—. La complementariedad obliga a que en la sesión los dos temas se encuentren.</p>
+      <p>Cuando hay <strong>asimetría de tiempo</strong> entre los dos miembros, se compensa por función, no reduciendo el rigor de nadie:</p>
+      <div class="dim">
+        <ul>
+          <li><b>Quien tiene más tiempo</b> absorbe el volumen extensivo: lectura primaria larga, lectura secundaria de apoyo, ejercicios extendidos.</li>
+          <li><b>Quien tiene menos tiempo</b> asume con más frecuencia el <b>rol crítico</b>: preparar las objeciones más fuertes, rastrear conexiones con otros autores, hallar los puntos débiles. Es trabajo de menor volumen pero mayor exigencia.</li>
+          <li><b>El rol crítico rota.</b> Ningún miembro se especializa cómodamente en una función; ambos cubren todo el material aunque con distinta profundidad.</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ IV. FASES ============ -->
+  <section id="fases" class="section">
+    <div class="col">
+      <div class="sec-head">
+        <span class="sec-num"><span class="roman">IV</span>La unidad operativa</span>
+        <h2 class="sec-title">El protocolo de inmersión temática</h2>
+        <p class="sec-sub">Siete fases para atacar cualquier tema. Es una espiral, no una línea recta: se vuelve al mismo texto con preguntas distintas, y cada pasada extrae una capa nueva.</p>
+      </div>
+
+      <div class="phases">
+        <div class="phase">
+          <span class="ph-n">1</span>
+          <div class="ph-body">
+            <h3>Reconocimiento del terreno</h3>
+            <p class="ph-what">Antes de leer la fuente, construir el mapa. Con material panorámico (enciclopedia filosófica, manual serio), responder cuatro preguntas: qué tipo de problema es, cuál es su historia, cuáles son las posiciones principales y por qué importa filosóficamente.</p>
+            <p class="ph-prod"><b>Producto</b> &nbsp;Una página escrita con las cuatro respuestas.</p>
+          </div>
+        </div>
+        <div class="phase">
+          <span class="ph-n">2</span>
+          <div class="ph-body">
+            <h3>Identificación del texto-eje</h3>
+            <p class="ph-what">Decidir, entre los dos, cuál es el texto primario central: aquel del cual no puede prescindirse si se quiere tener opinión informada. Si el tema es contemporáneo y no hay eje único, se eligen tres o cuatro textos rivales.</p>
+            <p class="ph-prod"><b>Producto</b> &nbsp;Decisión razonada del texto-eje (o de los textos en disputa).</p>
+          </div>
+        </div>
+        <div class="phase">
+          <span class="ph-n">3</span>
+          <div class="ph-body">
+            <h3>Primera lectura, sin pretensiones</h3>
+            <p class="ph-what">Lectura corrida y completa, casi como una novela difícil. El objetivo es captar el <em>movimiento</em> del texto, no su contenido detallado. Cuando algo no se entiende, se sigue adelante: la incomprensión local es información, no obstáculo.</p>
+            <p class="ph-prod"><b>Producto</b> &nbsp;Dos o tres frases sobre qué <em>hace</em> el texto (no qué dice).</p>
+          </div>
+        </div>
+        <div class="phase">
+          <span class="ph-n">4</span>
+          <div class="ph-body">
+            <h3>Mapeo conceptual</h3>
+            <p class="ph-what">Antes de la segunda lectura, dibujar juntos la red de conceptos clave y sus relaciones intuidas. Visual, no lineal. El mapa muestra qué buscar después y dónde están los huecos de comprensión.</p>
+            <p class="ph-prod"><b>Producto</b> &nbsp;Mapa visual de conceptos y relaciones.</p>
+          </div>
+        </div>
+        <div class="phase">
+          <span class="ph-n">5</span>
+          <div class="ph-body">
+            <h3>Segunda lectura, con escalpelo</h3>
+            <p class="ph-what">La lectura larga y meticulosa. Se lee por <em>unidades argumentativas</em> (un argumento entero), no por páginas; se reconstruye cada unidad antes de seguir; se marca triple (tesis, conceptos técnicos, pasajes oscuros) y se dialoga con el texto en los márgenes.</p>
+            <p class="ph-prod"><b>Producto</b> &nbsp;Reconstrucción de 5 a 10 páginas con la estructura argumentativa completa, en palabras propias.</p>
+          </div>
+        </div>
+        <div class="phase">
+          <span class="ph-n">6</span>
+          <div class="ph-body">
+            <h3>Confrontación dialéctica</h3>
+            <p class="ph-what">La sesión conjunta. Tres movimientos: cada uno <em>expone</em> su reconstrucción; el otro <em>objeta</em> (no para aclarar el texto, sino para probar si la reconstrucción capta lo defendible); cada uno <em>ajusta</em>. El ajuste honesto es éxito, no fracaso.</p>
+            <p class="ph-prod"><b>Producto</b> &nbsp;Reconstrucción ajustada, escrita esa misma noche.</p>
+          </div>
+        </div>
+        <div class="phase">
+          <span class="ph-n">7</span>
+          <div class="ph-body">
+            <h3>Tercera lectura, en clave crítica</h3>
+            <p class="ph-what">Volver al texto con la pregunta transformada: ya no “¿qué dice?” ni “¿cómo lo argumenta?”, sino <strong>“¿es verdad?”</strong> y “¿qué objeciones enfrenta y cómo se defendería?”. Lectura más rápida pero más densa. Se acompaña de uno o dos comentarios secundarios críticos.</p>
+            <p class="ph-prod"><b>Producto</b> &nbsp;Ensayo de 1000 a 1500 palabras con tesis propia, argumento, objeción anticipada y respuesta.</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="variants">
+        <h4>Variaciones según el tipo de tema</h4>
+        <ul>
+          <li><b>Temas técnicos</b> (lógica, filosofía de la ciencia, filosofía del lenguaje analítica): la Fase 5 incluye resolución sistemática de ejercicios. Sin ejercicios resueltos, la comprensión es ilusoria.</li>
+          <li><b>Temas históricos amplios</b> (medieval, idealismo alemán, fenomenología): la Fase 1 pesa más y dura más; la Fase 7 exige lectura comparada con autores adyacentes —Hegel sin Kant es incomprensible.</li>
+          <li><b>Temas contemporáneos</b> (filosofía de la mente, metaética, filosofía política actual): no hay texto-eje único; las Fases 3 a 5 se hacen en paralelo sobre varios textos rivales, y la Fase 6 se vuelve polifónica.</li>
+        </ul>
+      </div>
+
+      <div class="callout">
+        <span class="clabel">Sobre el ritmo</span>
+        <p>La filosofía es lenta. La velocidad real de comprensión está cerca de <em>diez a quince páginas serias de fuente primaria al día</em>, no cincuenta. Un tema mediano toma de cuatro a ocho semanas; uno mayor, varios meses. Acepten ese ritmo desde el principio: leer menos textos bien es siempre mejor que leer más textos mal. La filosofía premia profundidad sobre cobertura.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ V. REGLAS ============ -->
+  <section id="reglas" class="section">
+    <div class="col">
+      <div class="sec-head">
+        <span class="sec-num"><span class="roman">V</span>La disciplina</span>
+        <h2 class="sec-title">Las reglas de calidad</h2>
+        <p class="sec-sub">Lo que distingue el método serio del simulacro. La disciplina de estas reglas <em>es</em> el método. Conviene revisarlas cada mes.</p>
+      </div>
+      <div class="rules">
+        <div class="rule"><div class="rname">Silencio productivo</div><p>Durante la exposición del otro, no se interrumpe para corregir microerrores. Se anota y se guarda para el interrogatorio.</p></div>
+        <div class="rule"><div class="rname">Objeción reconstruida</div><p>No se objeta hasta que el otro reconozca su propio argumento en tu reconstrucción de él.</p></div>
+        <div class="rule"><div class="rname">Concesión honesta</div><p>Quien se equivoca lo dice. Quien recibe la concesión no celebra: ofrece la mejor versión del argumento concedido.</p></div>
+        <div class="rule"><div class="rname">Tercero ausente</div><p>Ante el acuerdo demasiado fácil, uno asume la voz de un filósofo —real o imaginado— que objete el consenso.</p></div>
+        <div class="rule"><div class="rname">Pregunta no resuelta</div><p>Cada sesión termina con al menos una duda registrada. Cada tres unidades, una sesión entera para atacar las acumuladas.</p></div>
+        <div class="rule"><div class="rname">Texto sobre la mesa</div><p>La fuente primaria, siempre físicamente accesible. Se zanja leyendo el pasaje, no recordándolo.</p></div>
+        <div class="rule"><div class="rname">Baja sin culpa</div><p>La semana imposible se declara al inicio del ciclo y se compensa después, sin recriminación. La culpa mata más métodos que la pereza.</p></div>
+        <div class="rule"><div class="rname">Corte temporal</div><p>La sesión que llega a su hora se corta, aunque queden pendientes. Lo pendiente pasa a la siguiente. Las sesiones eternas se cancelan primero.</p></div>
+        <div class="rule"><div class="rname">Propósito declarado</div><p>Cada encuentro empieza con dos minutos donde se enuncia su propósito. Sin propósito, el tiempo se diluye en charla.</p></div>
+        <div class="rule"><div class="rname">Incomprensión productiva</div><p>Algo de confusión al inicio y un resto al final son señales de buena lectura. Quien dice entenderlo “todo” no lo entendió.</p></div>
+        <div class="rule"><div class="rname">Producto escrito por fase</div><p>Sin artefacto escrito, la fase no se completó, por más horas que se hayan dedicado.</p></div>
+        <div class="rule"><div class="rname">Veto temático limitado</div><p>Una vez al año, cada quien puede vetar un tema o un autor sin justificarse. Respeta la subjetividad real sin descarrilar el plan.</p></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ VI. DIMENSIONES ============ -->
+  <section id="dimensiones" class="section">
+    <div class="col">
+      <div class="sec-head">
+        <span class="sec-num"><span class="roman">VI</span>El corazón cualitativo</span>
+        <h2 class="sec-title">Las cinco dimensiones del método</h2>
+      </div>
+      <p class="dim-intro">La estructura dice <em>cómo</em> trabajar. Estas cinco dimensiones deciden <em>si el trabajo sirve</em>: con qué materiales, con qué mente, enseñándose de qué modo, y —sobre todo— sin sellarse en una cámara de eco.</p>
+
+      <!-- 1 materiales -->
+      <div class="dim">
+        <p class="dim-tag"><span class="k">A</span>Primera dimensión</p>
+        <h3>Los materiales</h3>
+        <ul>
+          <li><b>Triangular los programas oficiales.</b> Para cada curso, lean las planeaciones de los tres profesores, no de uno. Lo que coincide en las tres es el canon y la secuencia no negociables; lo que aparece en solo una revela la manía de ese docente. Les da un criterio de qué es esencial decidido por convergencia, no por ustedes —que todavía no saben—.</li>
+          <li><b>Ediciones canónicas antes que muchos PDF.</b> En filosofía la traducción <em>es</em> parte del contenido: una mala traducción de Kant te hace entender mal el argumento. Para cada autor clave, una traducción de referencia (Gredos, Tecnos, FCE, Alianza; bilingüe para los técnicos), física si pueden, porque marcar el mismo ejemplar en tres lecturas es parte del método.</li>
+          <li><b>Dos tipos de edición.</b> La <em>de trabajo</em> —que rayas, doblas, habitas— y la <em>de referencia</em> —aparato crítico, notas eruditas, para zanjar disputas—.</li>
+          <li><b>La capa de referencia gratuita y fiable.</b> La <em>Stanford Encyclopedia of Philosophy</em> y la <em>Internet Encyclopedia of Philosophy</em> para orientarse (revisadas por pares, superiores a casi todo lo demás); <em>PhilPapers</em> para rastrear bibliografía secundaria.</li>
+        </ul>
+      </div>
+
+      <!-- 2 forma de estudio -->
+      <div class="dim">
+        <p class="dim-tag"><span class="k">B</span>Segunda dimensión</p>
+        <h3>La forma de estudio</h3>
+        <ul>
+          <li><b>El cuaderno de lugares comunes.</b> Las reconstrucciones son <em>verticales</em>: hondas en un solo texto. Este cuaderno es <em>horizontal</em>: organizado por problema y por concepto, no por autor. El problema de los universales va en la misma página en Aristóteles, Boecio, Ockham y Russell. Es lo que convierte cincuenta lecturas-isla en un mapa conectado.</li>
+          <li><b>Tres capas, no un blog plano.</b> En su espacio compartido: (1) las reconstrucciones, por texto; (2) el cuaderno de lugares comunes, por problema y concepto —el activo real a largo plazo—; (3) el registro persistente de preguntas no resueltas.</li>
+          <li><b>El diario filosófico.</b> Privado y sin estructura, donde se piensa mal, se contradice uno, se siguen corazonadas. La escritura pulida <em>prueba</em> la comprensión; el diario la <em>genera</em>.</li>
+          <li><b>Memorizar estructuras, no solo definiciones.</b> La forma del cogito, los pasos del argumento ontológico, la estructura de Gettier, las cuatro causas. No como trivia: pensar con fluidez exige tener las piezas a la mano sin ir a buscarlas.</li>
+        </ul>
+      </div>
+
+      <!-- 3 mentalidad -->
+      <div class="dim">
+        <p class="dim-tag"><span class="k">C</span>Tercera dimensión</p>
+        <h3>La mentalidad</h3>
+        <ul>
+          <li><b>Querer entender más que tener razón.</b> El enemigo más hondo del crecimiento filosófico es el placer de ganar la discusión. En el par, quien concede bien tuvo el mejor día.</li>
+          <li><b>Tolerancia a la aporía.</b> Permanecer en la confusión sin correr a resolverla. La urgencia de “entenderlo y avanzar” produce comprensión falsa; la filosofía real incluye tramos largos de desconcierto productivo.</li>
+          <li><b>Sospecha de la sistematización prematura.</b> Resistan la tentación de tener ya “su postura” sobre todo. Sostener posiciones con ligereza, provisionalmente, por mucho tiempo, es marca de seriedad. Las opiniones se ganan; no se empieza con ellas.</li>
+          <li><b>Cuidado con la trampa estética.</b> Hay una imagen seductora de “ser filósofo” —el tono, las referencias— que es enemiga del trabajo, que es sobre todo lento, técnico y humillante. La prueba: ¿lees el difícil medio del argumento, o solo las conclusiones citables?</li>
+          <li><b>La caridad como percepción, no solo regla.</b> Con el tiempo deberían ver <em>automáticamente</em> la versión más fuerte de una postura antes de ver sus fallas. Es el hábito más valioso que el método puede construir.</li>
+        </ul>
+      </div>
+
+      <!-- 4 enseñarnos -->
+      <div class="dim">
+        <p class="dim-tag"><span class="k">D</span>Cuarta dimensión</p>
+        <h3>La forma de enseñarnos</h3>
+        <ul>
+          <li><b>El modo socrático.</b> A veces se enseña no explicando, sino preguntando: conducir al otro a reconstruir el argumento por sí mismo. Es más lento y más difícil, pero construye su capacidad en vez de solo transferirle contenido. Alternen sesiones expositivas y socráticas.</li>
+          <li><b>Enseñanza asimétrica por necesidad.</b> A veces debe enseñar quien <em>menos</em> domina el tema, porque prepararse para enseñar es la forma más potente de aprender. La dificultad es el punto.</li>
+          <li><b>La ventaja de la ignorancia fresca.</b> El mejor para explicar una idea difícil suele ser quien apenas la entendió, porque recuerda exactamente qué confundía. No esperen a dominar algo para enseñarlo: enséñenlo mientras la lucha está fresca.</li>
+        </ul>
+      </div>
+
+      <!-- 5 cámara de eco -->
+      <div class="dim">
+        <p class="dim-tag"><span class="k">E</span>Quinta dimensión</p>
+        <h3>Romper la cámara de eco</h3>
+        <div class="callout">
+          <span class="clabel">La advertencia central</span>
+          <p>Un par autosuficiente está intelectualmente sellado. Su fortaleza —autonomía, intensidad, lenguaje compartido— es exactamente su riesgo: la <em>folie à deux</em>, dos personas que refuerzan sus malentendidos hasta que un error compartido se siente como verdad establecida. Dos es el número más peligroso: suficiente para sentirse validado, demasiado poco para detectar el error sistemático.</p>
+          <p>La regla del tercero ausente ayuda hacia adentro, pero no basta. Hay que abrir una ventana al exterior <em>deliberadamente</em>.</p>
+        </div>
+        <ul>
+          <li><b>Exposición periódica a filósofos reales.</b> Coloquios, conferencias y seminarios públicos —del Instituto de Investigaciones Filosóficas de la UNAM, de la Facultad, de El Colegio de México, muchos ahora híbridos o grabados—. El punto no es absorber contenido, sino calibrar: oír cómo argumenta gente entrenada y qué tan alta está la vara. No puedes ver tu propio techo desde dentro del cuarto.</li>
+          <li><b>Someter el pensamiento a extraños.</b> Publicar de vez en cuando una versión apretada de una reconstrucción o un argumento en foros de filosofía. Ser corregido por alguien sin inversión en su amistad es una retroalimentación más filosa.</li>
+          <li><b>El ritual del tercer lector.</b> Cada pocos meses, lleven su mejor ensayo a alguien fuera del par —un profesor en horario de oficina, un estudiante de posgrado, un conocido competente— y dejen que lo destroce. Una crítica externa por trimestre basta para cazar la deriva.</li>
+          <li><b>Una entrada a las lenguas.</b> No fluidez, pero sí acceso terminológico al griego, el alemán y el latín (<em>ousía</em>, <em>Vorstellung</em>, <em>Dasein</em>, <em>a priori</em>). Los mantiene honestos sobre lo que el original dice frente a lo que una traducción eligió. Es justo lo que los autodidactas se saltan y luego lamentan.</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ VII. MICROTAREAS ============ -->
+  <section id="microtareas" class="section">
+    <div class="col">
+      <div class="sec-head">
+        <span class="sec-num"><span class="roman">VII</span>El tiempo recuperado</span>
+        <h2 class="sec-title">El banco de microtareas</h2>
+        <p class="sec-sub">Los tiempos muertos —trayectos, esperas, descansos— no sirven para lectura profunda, pero sí para tres cosas que no roban tiempo a esa lectura.</p>
+      </div>
+      <div class="dim">
+        <ul>
+          <li><b>Revisión espaciada</b> de tarjetas (Anki o equivalente) sobre definiciones técnicas y formas argumentales: cinco a diez minutos al día. Resuelve la retención sin tocar el tiempo de lectura.</li>
+          <li><b>Escucha de podcasts filosóficos de calidad</b> durante traslados o ejercicio —<em>Philosophy Bites</em>, <em>The Partially Examined Life</em>, en español <em>La filosofía aquí y ahora</em> de Feinmann—. Alimentan la intuición histórica; no sustituyen la lectura.</li>
+          <li><b>Anotación inmediata de dudas sueltas.</b> Cinco segundos en una nota del teléfono cada vez que surge un pensamiento sobre el material. Revisadas al final de la semana, esas notas marcan justo donde su mente está trabajando de verdad.</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ VIII. EVALUACIÓN ============ -->
+  <section id="evaluacion" class="section">
+    <div class="col">
+      <div class="sec-head">
+        <span class="sec-num"><span class="roman">VIII</span>El control de calidad</span>
+        <h2 class="sec-title">La evaluación mensual</h2>
+      </div>
+      <p>Cada cuatro semanas, una sesión completa dedicada al <strong>método</strong>, no al contenido. Tres preguntas guía: ¿qué temas no entendimos bien y por qué?; ¿qué reglas dejamos de cumplir y con qué consecuencias?; ¿qué necesitamos cambiar para el próximo mes? Sin esta revisión, los vicios se sedimentan.</p>
+      <div class="callout">
+        <span class="clabel">Señal de alarma</span>
+        <p>Si en alguna sesión <em>nadie concedió nada y nadie objetó nada serio</em>, el método se está degradando hacia la lectura compartida cómoda. Es momento de recalibrar.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ IX. ULTRALEARNING ============ -->
+  <section id="ultralearning" class="section">
+    <div class="col">
+      <div class="sec-head">
+        <span class="sec-num"><span class="roman">IX</span>La justificación</span>
+        <h2 class="sec-title">Correspondencia con el <i>ultralearning</i></h2>
+        <p class="sec-sub">Por qué cada pieza del método entrena lo que debe entrenar.</p>
+      </div>
+      <div class="ul-map">
+        <div class="term">Directness</div><div class="gloss">Se hace filosofía —argumentar, objetar, reconstruir—, no se lee <em>sobre</em> filosofía.</div>
+        <div class="term">Drill</div><div class="gloss">Los ejercicios técnicos y la disciplina de las objeciones preparadas por anticipado.</div>
+        <div class="term">Retrieval</div><div class="gloss">La exposición sin notas y las tarjetas de revisión espaciada.</div>
+        <div class="term">Feedback</div><div class="gloss">El interrogatorio dialéctico: retroalimentación severa y honesta del otro.</div>
+        <div class="term">Retention</div><div class="gloss">La reescritura corregida y la revisión mensual.</div>
+        <div class="term">Intuition</div><div class="gloss">La Fase 7 y la integración de la sesión: pensar con varias piezas a la vez, sin guion.</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ X. GLOSARIO ============ -->
+  <section id="glosario" class="section">
+    <div class="col">
+      <div class="sec-head">
+        <span class="sec-num"><span class="roman">X</span>El vocabulario</span>
+        <h2 class="sec-title">Glosario del método</h2>
+      </div>
+      <dl class="glossary">
+        <div class="gl"><dt>Texto-eje</dt><dd>El texto primario central de un tema, aquel del cual no puede prescindirse para tener opinión informada.</dd></div>
+        <div class="gl"><dt>Unidad argumentativa</dt><dd>Un argumento completo —tesis, premisas, ejemplos, conclusión—, sin importar cuántas páginas ocupe. La unidad real de lectura, no la página.</dd></div>
+        <div class="gl"><dt>Reconstrucción</dt><dd>Versión escrita del argumento de un texto en palabras propias, con su estructura explícita. El artefacto vertical, por texto.</dd></div>
+        <div class="gl"><dt>Cuaderno de lugares comunes</dt><dd>Registro horizontal organizado por problema y concepto, que cruza autores. Conecta lo que las reconstrucciones mantienen separado.</dd></div>
+        <div class="gl"><dt>Principio de caridad</dt><dd>Norma de reconstruir la posición ajena en su versión más fuerte antes de objetarla. Con el tiempo, hábito de percepción.</dd></div>
+        <div class="gl"><dt>Simetría compensada</dt><dd>Equilibrio de carga medido en el ciclo completo y ajustado por función, no impuesto sesión por sesión.</dd></div>
+        <div class="gl"><dt>Rol crítico</dt><dd>Función rotativa de menor volumen y mayor exigencia: preparar las objeciones más fuertes y rastrear conexiones.</dd></div>
+        <div class="gl"><dt>Tercero ausente</dt><dd>Voz de un filósofo —real o imaginado— que uno asume para objetar el consenso cuando el acuerdo llega demasiado fácil.</dd></div>
+        <div class="gl"><dt>Aporía</dt><dd>Estado de confusión o impasse filosófico. Aquí, tramo productivo en el que se permanece sin correr a resolverlo.</dd></div>
+        <div class="gl"><dt>Folie à deux</dt><dd>El riesgo de que dos personas refuercen sus malentendidos hasta que un error compartido se sienta como verdad.</dd></div>
+        <div class="gl"><dt>Edición de trabajo / de referencia</dt><dd>La que se raya y se habita, frente a la de aparato crítico que se consulta para zanjar disputas.</dd></div>
+      </dl>
+    </div>
+  </section>
+
+  <!-- ============ SÍNTESIS ============ -->
+  <section id="sintesis" class="section" style="border-bottom:none;">
+    <div class="col">
+      <div class="sec-head">
+        <span class="sec-num"><span class="roman">XI</span>Para recordar</span>
+        <h2 class="sec-title">Síntesis en una página</h2>
+        <p class="sec-sub">Todo el método, condensado. Si solo recuerdan esto, recuerdan lo esencial.</p>
+      </div>
+
+      <div class="synth">
+        <p class="s-eyebrow">Tarjeta de memoria</p>
+        <h2>Cada uno domina una mitad y la <em>enseña</em>; ambos verifican lo aprendido por el debate y la escritura.</h2>
+
+        <div class="s-block">
+          <p class="s-k">Los seis principios</p>
+          <div class="chips">
+            <span class="chip"><b>1</b> Feynman</span>
+            <span class="chip"><b>2</b> Caridad</span>
+            <span class="chip"><b>3</b> Simetría compensada</span>
+            <span class="chip"><b>4</b> Escritura</span>
+            <span class="chip"><b>5</b> Retorno al texto</span>
+            <span class="chip"><b>6</b> Sostenibilidad</span>
+          </div>
+        </div>
+
+        <div class="s-block">
+          <p class="s-k">Las siete fases · siete verbos</p>
+          <div class="chips">
+            <span class="chip">Reconocer</span>
+            <span class="chip">Elegir</span>
+            <span class="chip">Sobrevolar</span>
+            <span class="chip">Mapear</span>
+            <span class="chip">Diseccionar</span>
+            <span class="chip">Confrontar</span>
+            <span class="chip">Criticar</span>
+          </div>
+        </div>
+
+        <div class="s-block">
+          <p class="s-k">La disposición</p>
+          <p class="s-line">Querer <strong>entender</strong> más que tener razón · tolerar la <strong>aporía</strong> · sistematizar <strong>tarde</strong> · amar la práctica, no la identidad.</p>
+        </div>
+
+        <div class="s-block">
+          <p class="s-k">El peligro</p>
+          <p class="s-line">La <strong>cámara de eco</strong>. Dos pueden volverse muy buenos confirmándose los errores. Abran una ventana al exterior: filósofos reales, lectores extraños, otras lenguas.</p>
+        </div>
+
+        <div class="s-divider"></div>
+
+        <p class="s-final">La prueba de que un tema fue dominado: un ensayo con tesis propia que sobreviva a una objeción seria. Lo demás es preparación.</p>
+      </div>
+
+      <p class="pull" style="margin-top:clamp(2.5rem,6vw,4rem);">Una pareja que sostiene seis horas bien hechas durante tres años habrá pensado más, y más hondo, que una que arrancó con doce y se rindió a los cuatro meses.
+        <span class="by">El principio de toda la empresa</span>
+      </p>
+    </div>
+  </section>
+
+  <!-- ============ COLOPHON ============ -->
+  <footer class="colophon">
+    <div class="col">
+      <span class="mark">◆</span>
+      <p>Método dialéctico de pares · Manual de estudio para la filosofía · La disciplina de las reglas <em>es</em> el método</p>
+    </div>
+  </footer>
+
+</div>
+</body>
+</html>

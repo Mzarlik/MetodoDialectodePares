@@ -1,0 +1,2 @@
+# MetodoDialectodePares
+Proyecto de Filosofia.
