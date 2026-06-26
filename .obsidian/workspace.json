@@ -11,10 +11,12 @@
             "id": "853816a6cf6236df",
             "type": "leaf",
             "state": {
-              "type": "graph",
-              "state": {},
-              "icon": "lucide-git-fork",
-              "title": "Vista gráfica"
+              "type": "image",
+              "state": {
+                "file": "Filosofia temario.jpeg"
+              },
+              "icon": "lucide-image",
+              "title": "Filosofia temario"
             }
           }
         ]
